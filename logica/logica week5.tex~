@@ -1,0 +1,25 @@
+\documentclass{artikel1}
+\usepackage[dutch]{babel}
+\author{Paul Sohier 0806122\\Sebastiaan Polderman}
+\title{Logica week 3}
+
+
+\begin{document}
+\maketitle
+
+\section{Opdracht 1}
+$\exists m$ Sommige mensen\\
+$\forall m$ Alle mensen\\
+$\neg\exists m$ Er is niemand\\
+$\neg\forall m$ Niet alle mensen\\
+\section{Opdracht 2}
+%∃u∀v∃w∀x∃y∀z¬P(u,v,w,x,y,z)
+a. $\exists u \forall v \exists w \forall x \exists y \forall z \neg P (u,v,w,x,y,z)$
+b. 
+\section{Opdracht 3}
+
+\section{Opdracht 4}
+
+\section{Opdracht 5}
+
+\end{document}
