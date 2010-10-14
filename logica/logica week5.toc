@@ -1,0 +1,3 @@
+\select@language {dutch}
+\contentsline {section}{\numberline {1}\bfseries begin}{1}
+\contentsline {section}{\numberline {2}\bfseries Einde}{1}
