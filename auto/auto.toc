@@ -25,5 +25,5 @@
 \contentsline {subsubsection}{\numberline {3.1.4}\rmfamily Opdracht 4}{4}
 \contentsline {subsubsection}{\numberline {3.1.5}\rmfamily Opdracht 5}{4}
 \contentsline {subsubsection}{\numberline {3.1.6}\rmfamily Opdracht 6}{4}
-\contentsline {subsubsection}{\numberline {3.1.7}\rmfamily Opdracht 7}{4}
+\contentsline {subsubsection}{\numberline {3.1.7}\rmfamily Opdracht 7}{5}
 \contentsline {subsubsection}{\numberline {3.1.8}\rmfamily Opdracht 8}{5}
