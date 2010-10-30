@@ -144,7 +144,7 @@
    automatiseringsproject?}
    Volgens figuur 4.6 in de read is de gemiddelde productiviteit voor administatieve systemen $15,2$. De parameters van vraag 5 geven een productiviteit van $3$.
    
-   \subsubsection[Opdracht 6]{\ldots}
+   \subsubsection[Opdracht 6]{Een computerprogramma heeft bij functiepuntanalyse voor de systeemkarakteristieken een totale correctiefactor $\bullet \begin{array}{c}14\\i=1 \end{array} c_i=50$. Uit de specificatie blijkt dat er 3 verschillende invoer-, 7 uitvoer- en 5 vraagtypen nodig zijn. Daarnaast zijn er 2 externe gegevensverzamelingen en 2 interne gegevensverzamelingen nodig. Alle geruiktsfuncties hebben een gemiddelde complexiteit. Men zal het computerprogramma coderen in de taal JAva ($C_t=53$). Er wordt geen gebruik gemaakt van hergebruik. Maak een schatting voor de broncode.}
    \begin{displaymath}
     f=3*4+4*5+5*4+2*10+2*=12+20+20+20+4=86
    \end{displaymath}
@@ -161,7 +161,49 @@
    \subsubsection[Opdracht 7]{Verklaar waarom juist computertalen met een lage ct waarde (zie paragraaf 4.1.1) geschikt zijn voor prototyping.}
    Dit komt doordat de hoeveelheid code kleiner is en hierdoor dus sneller is aan te passen
    
-   \subsubsection[Opdracht 8]{\ldots}
+   \subsubsection[Opdracht 8]{Gegven een studentinformatiesysteem bestaande uit de volgende onderdelen:
+   \begin{tabular}[t]{|ll|l|}
+     \hline
+     soort & omschrijving & complexiteit \\
+     \hline
+     module & inschrijving student & gemakkelijk \\
+     module & uitschrijving student & gemakkelijk \\
+     module & rekening collegegeld sturen & gemakkelijk \\
+     module & machtiging betaling collegegeld verwerken & makkelijk \\
+     module & betaling collegegeld verwerken & gemiddeld \\
+     module & aanmaningen sturen & gemakkelijk \\
+     module & tentamencijfers verwerken & moeilijk \\
+     module & studieresultaten naar Informatie Beheer Groep & gemiddeld \\
+     scherm & inschrijven van een student & gemiddeld \\
+     scherm & uitschrijven van een student & gemiddeld \\
+     scherm & betaling student invoeren & gemiddeld \\
+     scherm & machtiging betaling invoeren & gemiddeld \\
+     scherm & tentamencijfers invoeren & moeilijk \\
+     scherm & vakkentabel invoeren & gemiddeld \\
+     scherm & vakkentabel wijzigen & moeilijk \\
+     formulier & studentgegevens & gemiddeld \\
+     formulier & jaarlijkse voortgangsrapportage & moeilijk \\
+     formulier & rapportage van tentamenresultaten & moeilijk \\
+     formulier & aanmaningen collegegeld & gemiddeld \\
+     \hline
+   \end{tabular}
+   \begin{itemize}
+     \item Maak met een objectpuntanalyse (OPA) een schatting voor de inspanning E als het hergebruik rond de $30\%$ ligt en het ontwikkelteam een lage productiviteit heeft. Maak een schatting met COCOMO-81 van de projecttijd T, indien het project een `organische' karakter heeft.
+     \item Maak een schatting van de projecttijd T met COCOMO-II, indien er geen sprake is van tijdsdruk en het project de volgende karateristieken heeft:\\
+       \begin{tabular}[]{|l|l|}
+         \hline
+         Karakteristieken & $b_i$ \\
+         \hline
+         ontwerpervaring & $0,05$ \\
+         ontwerpvrijheid & $0,02$ \\
+         ontwerprisico & $0,3$ \\
+         ontwerpteam & $0,03$ \\
+         organisatie & $0,01$ \\
+         \hline
+       \end{tabular}\\
+   \end{itemize}
+   %\\ %Anders lijkt het antwoord op de vraag nog :)
+   }
    \begin{itemize}
     \item OPA
 	  \begin{displaymath}
