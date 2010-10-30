@@ -72,7 +72,7 @@
    Nog doen?
    
  \section{Week 2}
-  \subsection{Hoofdstuk 3}
+  \subsection{Opdrachten bij hoofdstuk 3}
    \subsubsection[Opdracht 1]{De projectkosten worden begroot op
    100000euro. De winst wordt gesteld op 15\%.Het risico dat men met dit
    project denkt te lopen, is gebaseerd op de ervaring dat 20\% van dit
@@ -114,7 +114,7 @@
     \end{itemize}
     
  \section{Week 3}
-  \subsection{Hoofdstuk 4}
+  \subsection{Opdrachten bij hoofdstuk 4}
    \subsubsection[Opdracht 1]{Noem minimaal 7 factoren die de individuele productiviteit be\"invloeden.}
    \begin{itemize}
     \item[1] Kennisniveau
@@ -146,18 +146,17 @@
    
    \subsubsection[Opdracht 6]{Een computerprogramma heeft bij functiepuntanalyse voor de systeemkarakteristieken een totale correctiefactor $\bullet \begin{array}{c}14\\i=1 \end{array} c_i=50$. Uit de specificatie blijkt dat er 3 verschillende invoer-, 7 uitvoer- en 5 vraagtypen nodig zijn. Daarnaast zijn er 2 externe gegevensverzamelingen en 2 interne gegevensverzamelingen nodig. Alle geruiktsfuncties hebben een gemiddelde complexiteit. Men zal het computerprogramma coderen in de taal JAva ($C_t=53$). Er wordt geen gebruik gemaakt van hergebruik. Maak een schatting voor de broncode.}
    \begin{displaymath}
-    f=3*4+4*5+5*4+2*10+2*=12+20+20+20+4=86
+    f=3*4+4*5+5*4+2*10+2*7=12+20+20+20+14=86
    \end{displaymath}
    
    \begin{displaymath}
-    NFP=(0.65+0.01*50)*86=1.15
+    NFP=(0,65+0,01*50)*86=98,9 %Was 1.15
    \end{displaymath}
    
    \begin{displaymath}
-    S=1.15*53=60.95
+    S=98,9*53=5241,7
    \end{displaymath}
-   \\\\\\NOTE: Nog narekenen?\\\\\\
-   Het aantal regels broncode is dus ongeveer $60.95$
+   Het aantal regels broncode is dus ongeveer $5241$
    \subsubsection[Opdracht 7]{Verklaar waarom juist computertalen met een lage ct waarde (zie paragraaf 4.1.1) geschikt zijn voor prototyping.}
    Dit komt doordat de hoeveelheid code kleiner is en hierdoor dus sneller is aan te passen
    
@@ -222,7 +221,7 @@
 	  \end{displaymath}
    \end{itemize}
    \section{Week 4}
-   \subsection{Hoofdstuk 5}
+   \subsection{Opdrachten bij hoofdstuk 5}
    \subsubsection[Opdracht 1]{Gegeven een netwerk met 7 activiteiten:}
    \begin{itemize}
      \item[a] Bepaal met PERT het mijpalenplan en het kritieke pad
@@ -240,7 +239,7 @@
    \end{displaymath}
 
    \section{Week 5}
-   \subsection{Hoofdstuk 7}
+   \subsection{Opdrachten bij hoofdstuk 7}
    \subsubsection[Opdracht 1]{Van een objectgeori\"{e}nteerd computerprogramma in Java, zijn van alle classes de metrieken NOM,CBO, RFC, WMC, DIT en NOC gemeten. Een tiental classes had een verhoogd risico.}
    \begin{itemize}
      \item[a] Maak een tabel met riskante waarden van de waarden van de metrieken.
@@ -248,5 +247,48 @@
    \end{itemize}
    
    \subsubsection[Opdracht 2]{Bepaald WMC, DIT, NOC, CBO, RFC en LCOM van de volgende pseudo objecten broncode:}
-
+   \begin{tabular}[t]{|l|l|}
+     \hline
+     Class & trade \\
+     Variables & trade.id, counterparty, trade\_value \\
+     Methods & evaluate\_counterpart() \\
+     & get\_trade\_id(trade\_id) \\
+     & position\_update() \\
+     & \{position\_manager::report\_trade()\} \\
+     \hline
+     Class & bond\_trade \\
+     Variables & bond\_detials \\
+     Methods & get\_bond\_info() \\
+     \hline
+     Class & fx\_trade \\
+     Variables & forex\_detials \\
+     Methods & calculate\_exchange\_rates() \\
+     \hline
+     Class & equity\_trade \\
+     Variables & company, stock\_market, PE\_ratio,  earnings, week\_hi\_lo \\
+     Methods & Estimate\_beta() \\
+     & get\_stock\_quotes() \\
+     & \{quotron::quotes()\} \\
+     \hline
+     Class &municipal\_bond\_trade \\
+     Variables & state\_or\_federal, over\_the\_counter \\
+     Methods & calculate\_coupon\_rate() \\
+     & \{Tbil\_server::rate()\} \\
+     \hline
+     Class & corporate bond\_trade \\
+     Variables & adr, sp\_rating \\
+     Methods & calc\_rating(sp\_rating) \\
+     & \{if adr then fx\_trade::calculate\_exchange\_rates()\} \\
+     \hline
+     Class & international\_equity \\
+     Variables & exchange\_rate, quitation \\
+     Methods & perform\_anaylysis\_roa()\\
+     & \{fx\_trade::calculate\_exchange\_rates()\}\\
+     & get\_quotron(quotation) \\
+     \hline
+     Class & domestic\_equity \\
+     Variables & variables: attribute1\\
+     Methods & \\
+     \hline
+   \end{tabular}
 \end{document}
