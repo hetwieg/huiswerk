@@ -10,6 +10,7 @@
 \usepackage{url}
 \usepackage{eurosans} 
 \usepackage{multirow}
+\usepackage{graphicx}
 
 \setlength{\parskip}{0.2cm}
 \setcounter{secnumdepth}{3}
@@ -143,10 +144,10 @@
    functiepunten werd met een inspanning van 3 mensmaanden
    ontwikkeld. Is dit kenmerkend voor een administratief
    automatiseringsproject?}
-   Volgens figuur 4.6 in de reader is de gemiddelde productiviteit voor administatieve systemen $15,2$. De parameters van vraag 5 geven een productiviteit van $3$.
+   Volgens figuur 4.6 (Tabel \ref{reffig46}) in de reader is de gemiddelde productiviteit voor administatieve systemen $15,2$. De parameters van vraag 5 geven een productiviteit van $3$.
 
-   \begin{table}[ht] %hij zet hem op volgende pagina. Moet nog even kijken hoe beter aan te passen dat hij echt hier komt.
-     \caption{Figuur 4.6}
+   \begin{table}[h] %hij zet hem op volgende pagina. Moet nog even kijken hoe beter aan te passen dat hij echt hier komt.
+     \caption{Figuur 4.6}\label{reffig46}
      \begin{tabular}[t]{|l|l|l|l|}
        \hline
        \multirow{3}{*}{Toepassingsgebied} & \multicolumn{3}{c|}{Productiveit P [nfp/mensmaand]} \\
@@ -244,6 +245,7 @@
 	  \end{displaymath}
    \end{itemize}
    \section{Week 4}
+
    \subsection{Opdrachten bij hoofdstuk 5}
    \subsubsection[Opdracht 1]{Gegeven een netwerk met 7 activiteiten:}
    \begin{itemize}
@@ -251,10 +253,50 @@
      \item[b] Bepaal het Ganttscheme. Welke conclusies kan men daaruit trekken?
      \item[c] Bepaal het 95\%-betrouwbaarheidsinterval voor de werkelijke projecttijd.
    \end{itemize}
-
+   \begin{itemize}
+     \item[a] Zie figuur \ref{r51a}.
+     \item[b] Zie tabel \ref{r51b}.
+     \item[c]
+       \begin{displaymath}
+         o²=2+2+8+2=2+8+2+0=24
+       \end{displaymath}
+       \begin{displaymath}
+         14-(1,96*sqrt{24})=<T=<14+(1,96*sqrt{24}))
+       \end{displaymath}
+   \end{itemize}
+       \begin{figure}[tbh]
+         \caption{Antwoord bij Hoofdstuk 5 Vraag 1.a} \label{r51a}
+         \includegraphics[scale=0.75]{H5O1A.png}     
+       \end{figure}
+   \begin{table}
+     \caption{Antwoord bij Hoofdstuk 5 vraag 1.b} \label{r51b}
+       \begin{tabular}[htb]{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+         \hline
+             & 0..1 & 1..2 & 2..3 & 3..4 & 4..5 & 5..6 & 6..7 & 7..8 & 8..9 & 9..10 & 10..11 & 11..12 & 12..13 & 13..14 \\
+         \hline
+         A 2 &  --- &  --- &      &      &      &      &      &      &      &       &        &        &        &\\
+         \hline
+         B 4 &      &      &  --- & ---  & ---  & ---  & - - -& - - -&      &       &        &        &        &\\
+         \hline
+         C 3 &      &      &  --- & ---  & ---  &      &      &      &      &       &        &        &        &\\
+         \hline
+         D 2 &      &      &      &      &      &      & - - -& - - -&      &       &        &        &        &\\
+         \hline
+         E 6 &      &      &      &      &      & ---  & ---  & ---  & ---  & ---   & ---    &        &        &\\
+         \hline     
+         F 4 &      &      &      &      &      &      &      &      & - - -& - - - & ---    & ---    & - - -  & - - -\\
+         \hline
+         G 3 &      &      &      &      &      &      &      &      &      &       &        & ---    & ---    & ---\\
+         \hline
+       \end{tabular}
+   \end{table}
+   
    \subsubsection[Opdracht 2]{bepaal van de volgend activiteiten met PERT het mijlpalenplan en een schatting van het kritieke pad $T_k$}
 
    \subsubsection[Opdracht 3]{Van een collectief team is gegeven dat de verliesfactor per communicatiekaneel 5\% is, bereken de maximale groepsgrootte}
+   \begin{displaymath}
+     N=\frac{(1+i)}{(2*i)}=\frac{1+0,05}{2*0,05}=\frac{1,05}{0,10}=10,5
+   \end{displaymath}
 
    \subsubsection[Opdracht 4]{Toon aan dat de volgende formule geldt voor het hi\"{e}rarchieke team met $N$ teamleden en maximaal 6 ondergeschikten per echelon:}
    \begin{displaymath}

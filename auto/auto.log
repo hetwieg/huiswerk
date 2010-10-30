@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  30 OCT 2010 16:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  30 OCT 2010 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -76,77 +76,130 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 ))
 (/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen106
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
 ) (./auto.aux)
 \openout1 = `auto.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count90
+\scratchdimen=\dimen109
+\scratchbox=\box26
+\nofMPsegments=\count91
+\nofMParguments=\count92
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count93
+\MPscratchDim=\dimen110
+\MPnumerator=\count94
+\everyMPtoPDFconversion=\toks21
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 23.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <6> on input line 24.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./auto.toc [1])
 \tf@toc=\write3
 \openout3 = `auto.toc'.
 
- [2] [3]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 82.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 82.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+[2] [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
- [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+ [4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 229--229
 
  []
 
-[6] [7] [8] (./auto.aux) ) 
+[6] (/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
+)
+<H5O1A.png, id=36, 611.28375pt x 263.48438pt>
+File: H5O1A.png Graphic file (type png)
+ <use H5O1A.png>
+Overfull \hbox (5.49379pt too wide) in paragraph at lines 269--270
+[][] 
+ []
+
+
+Overfull \hbox (9.3246pt too wide) in paragraph at lines 273--292
+[][] 
+ []
+
+[7 <./H5O1A.png (PNG copy)>] [8] [9] (./auto.aux) ) 
 Here is how much of TeX's memory you used:
- 1086 strings out of 495006
- 15105 string characters out of 1181409
- 81886 words of memory out of 3000000
- 4284 multiletter control sequences out of 15000+50000
+ 2236 strings out of 495006
+ 28708 string characters out of 1181409
+ 99422 words of memory out of 3000000
+ 5408 multiletter control sequences out of 15000+50000
  8002 words of font info for 28 fonts, out of 3000000 for 9000
  68 hyphenation exceptions out of 8191
- 24i,9n,24p,620b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr
-/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on auto.pdf (9 pages, 159826 bytes).
+ 25i,9n,24p,620b,579s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmbxsl10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+mi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmsl10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on auto.pdf (10 pages, 179231 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
