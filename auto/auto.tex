@@ -37,7 +37,7 @@
    Bij validatie (Valideren) wordt gekeken of het ontwerp voldoet aan het eisenpakket, terwijl er bij verificatie wordt gekeken of het process voldeed.
    
    \subsubsection[Opdracht 4]{Hoe zou u de ontwikkeltrajacten van het waterval-, het incremenetele- en het evolutionare model aangeven in figuur 1.1?}
-   Nog doen.
+   \includegraphics[scale=0.5]{H1O4.png}
    
    \subsubsection[Opdracht 5]{Zal de evolutionare ontwikkelstrategie de grens tussen ontwikkeling en onderhoud laten verdwijnen?}
    Ja, zodra je onderhoud doet kan je tegelijkertijd ook nieuwe, door de klant gewenste, features kunnen toevoegen aan het al bestaande programma. 
@@ -71,7 +71,11 @@
     \item[b] De beschikbaarheid
     \item[c] De herstelbaarheid
    \end{itemize}
-   Nog doen?
+   \begin{itemize}
+     \item[a] Regelmatige validatie en verificatie tijdens alle stappen van het project.
+     \item[b] Het systeem zo laten functioneren dat, mocht er een storing plaatsvinden in een bepaald gedeelte, dat de rest van het systeem nog naar behoren blijft functioneren.
+     \item[c] Optimalisatie van de programmatuur.
+   \end{itemize}
    
  \section{Week 2}
   \subsection{Opdrachten bij hoofdstuk 3}
@@ -96,7 +100,13 @@
    \subsubsection[Opdracht 5]{Men kan een productiemiddel huren voor de
    prijs van 6100 e per maand. Indien men dit productiemiddel voor
    120000 e aanschaft, moet men 100 e per maand onderhoud betalen. De
-   restwaarde is nihil.}
+   restwaarde is nihil.
+   \begin{itemize}
+     \item Bepaal het omslagpunt.
+     \item Bereken het omslagpunt indien de discontovoet $1\%$ per maand is.
+     \item Welke financiele overweging kan bij deze keuze een belangerijke rol spelen?
+   \end{itemize}
+   }
     \begin{itemize}
      \item Het omslagpunt:
 	   \begin{displaymath}
@@ -146,8 +156,10 @@
    automatiseringsproject?}
    Volgens figuur 4.6 (Tabel \ref{reffig46}) in de reader is de gemiddelde productiviteit voor administatieve systemen $15,2$. De parameters van vraag 5 geven een productiviteit van $3$.
 
+   \begin{center}
    \begin{table}[h] %hij zet hem op volgende pagina. Moet nog even kijken hoe beter aan te passen dat hij echt hier komt.
      \caption{Figuur 4.6}\label{reffig46}
+     \begin{center}
      \begin{tabular}[t]{|l|l|l|l|}
        \hline
        \multirow{3}{*}{Toepassingsgebied} & \multicolumn{3}{c|}{Productiveit P [nfp/mensmaand]} \\
@@ -166,7 +178,9 @@
        administratieve systemen & $15,2$ & $3,8$ & $0,24$ \\
        \hline
      \end{tabular}
+     \end{center}
    \end{table}
+   \end{center}
    
    \subsubsection[Opdracht 6]{Een computerprogramma heeft bij functiepuntanalyse voor de systeemkarakteristieken een totale correctiefactor $\bullet \begin{array}{c}14\\i=1 \end{array} c_i=50$. Uit de specificatie blijkt dat er 3 verschillende invoer-, 7 uitvoer- en 5 vraagtypen nodig zijn. Daarnaast zijn er 2 externe gegevensverzamelingen en 2 interne gegevensverzamelingen nodig. Alle geruiktsfuncties hebben een gemiddelde complexiteit. Men zal het computerprogramma coderen in de taal JAva ($C_t=53$). Er wordt geen gebruik gemaakt van hergebruik. Maak een schatting voor de broncode.}
    \begin{displaymath}
@@ -185,6 +199,7 @@
    Dit komt doordat de hoeveelheid code kleiner is en hierdoor dus sneller is aan te passen
    
    \subsubsection[Opdracht 8]{Gegven een studentinformatiesysteem bestaande uit de volgende onderdelen:
+     \begin{center}
    \begin{tabular}[t]{|ll|l|}
      \hline
      soort & omschrijving & complexiteit \\
@@ -210,9 +225,11 @@
      formulier & aanmaningen collegegeld & gemiddeld \\
      \hline
    \end{tabular}
+   \end{center}
    \begin{itemize}
      \item Maak met een objectpuntanalyse (OPA) een schatting voor de inspanning E als het hergebruik rond de $30\%$ ligt en het ontwikkelteam een lage productiviteit heeft. Maak een schatting met COCOMO-81 van de projecttijd T, indien het project een `organische' karakter heeft.
      \item Maak een schatting van de projecttijd T met COCOMO-II, indien er geen sprake is van tijdsdruk en het project de volgende karateristieken heeft:\\
+       \begin{center}
        \begin{tabular}[]{|l|l|}
          \hline
          Karakteristieken & $b_i$ \\
@@ -223,7 +240,9 @@
          ontwerpteam & $0,03$ \\
          organisatie & $0,01$ \\
          \hline
-       \end{tabular}\\
+       \end{tabular}
+       \\
+       \end{center}
    \end{itemize}
    %\\ %Anders lijkt het antwoord op de vraag nog :)
    }
@@ -233,7 +252,7 @@
 	   NOP=50*(1-0.3)=35
 	  \end{displaymath} 
 	  \begin{displaymath}
-	   E=35/7=5
+	   E=\frac{35}{7}=5
 	  \end{displaymath}
     \item COCOMO-81
 	  \begin{displaymath}
@@ -248,6 +267,21 @@
 
    \subsection{Opdrachten bij hoofdstuk 5}
    \subsubsection[Opdracht 1]{Gegeven een netwerk met 7 activiteiten:}
+   \begin{center}
+     \begin{tabular}{|l|l|l|l|l|l|}
+       \hline
+       activiteit & omschrijving & afhankelijk van & $t_b$ & $t_m$ & $t_w$ \\
+       \hline
+       A & Definitie & & 1 & 2 & 3 \\
+       B & Hardware specificatie & A & 3 & 4 & 5 \\
+       C & Software specificatie & A & 1 & 2 & 9 \\
+       D & Hardware ontwikkeling & B & 1 & 2 & 3 \\
+       E & Software ontwikkeling & B C & 4 & 5 & 12 \\
+       F & Documenteren & D & 3 & 4 & 5 \\
+       G & Systeemintergratie & D E & 3 & 3 & 3 \\
+       \hline
+     \end{tabular}
+   \end{center}
    \begin{itemize}
      \item[a] Bepaal met PERT het mijpalenplan en het kritieke pad
      \item[b] Bepaal het Ganttscheme. Welke conclusies kan men daaruit trekken?
@@ -261,7 +295,10 @@
          o²=2+2+8+2=2+8+2+0=24
        \end{displaymath}
        \begin{displaymath}
-         14-(1,96*sqrt{24})=<T=<14+(1,96*sqrt{24}))
+         14-(1,96*\sqrt{24})=<T=<14+(1,96*\sqrt{24}))
+       \end{displaymath}
+       \begin{displaymath}
+         4,40=<T=<26,60
        \end{displaymath}
    \end{itemize}
        \begin{figure}[tbh]
@@ -292,7 +329,25 @@
    \end{table}
    
    \subsubsection[Opdracht 2]{bepaal van de volgend activiteiten met PERT het mijlpalenplan en een schatting van het kritieke pad $T_k$}
-
+   \begin{center}
+     \begin{tabular}{|l|l|l|}
+     \hline
+     activiteit & $t$ & afhankelijk van \\
+     \hline
+     A & 2 & K \\
+     B & 3 & H \\
+     C & 4 &\\
+     D & 2 & F G \\
+     E & 1 & D I J \\
+     F & 3 & B \\
+     G & 3 & C K \\
+     H & 3 & \\
+     I & 2 & A F \\
+     J & 1 & F \\
+     K & 2 & H \\
+     \hline
+     \end{tabular}
+   \end{center}
    \subsubsection[Opdracht 3]{Van een collectief team is gegeven dat de verliesfactor per communicatiekaneel 5\% is, bereken de maximale groepsgrootte}
    \begin{displaymath}
      N=\frac{(1+i)}{(2*i)}=\frac{1+0,05}{2*0,05}=\frac{1,05}{0,10}=10,5
@@ -308,10 +363,29 @@
    \subsubsection[Opdracht 1]{Van een objectgeori\"{e}nteerd computerprogramma in Java, zijn van alle classes de metrieken NOM,CBO, RFC, WMC, DIT en NOC gemeten. Een tiental classes had een verhoogd risico.}
    \begin{itemize}
      \item[a] Maak een tabel met riskante waarden van de waarden van de metrieken.
-     \item[b] Geef in de volgende tabel bij elke class aan welke metriek een kritieke waarde heeft.
+     \item[b] Geef in de volgende tabel bij elke class aan welke metriek een kritieke waarde heeft. \\
+       \begin{center}
+       \begin{tabular}{|l|l|l|l|l|l|l|l|}
+         \hline
+         class & NOM & CBO & RFC & RFC/NOM & WMC & DIT & NOC \\
+         \hline
+         1 & 54 & 8 & 536 & 9,9 & 175 & 1 & 0 \\
+         2 & 7 & 6 & 168 & 24,0 & 71 & 4 & 0 \\
+         3 & 33 & 4 & 240 & 7,2 & 105 & 2 & 0 \\
+         4 & 54 & 8 & 381 & 6,7& 117 & 2 & 2 \\
+         5 & 62 & 6 & 378 & 6,1 & 163 & 2 & 0 \\
+         6 & 63 & 7 & 235 & 3,7 & 156 & 2 & 0 \\
+         7 & 81 & 10  & 285 & 3,5 & 161 & 2 & 0 \\
+         8 & 42 & 5 & 127 & 3,0 & 69 & 3 & 0 \\
+         9 & 20 & 17 & 325 & 16,2 & 139 & 4 & 4 \\
+         10 & 46 & 5 & 186 & 4,0 & 238 & 1 & 3 \\
+         \hline
+       \end{tabular}
+       \end{center}
    \end{itemize}
    
    \subsubsection[Opdracht 2]{Bepaald WMC, DIT, NOC, CBO, RFC en LCOM van de volgende pseudo objecten broncode:}
+   \begin{center}
    \begin{tabular}[t]{|l|l|}
      \hline
      Class & trade \\
@@ -356,4 +430,5 @@
      Methods & \\
      \hline
    \end{tabular}
+   \end{center}
 \end{document}
