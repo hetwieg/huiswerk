@@ -409,7 +409,7 @@
        \end{center}
        
        Bij NOC is er geen aanbevolen kritieke waarde, maar er is wel hoe hoger deze waarde is hoe slechter de metriek is. Wij hebben bij een NOC van $\geq3$ aangenomen dat de NOC kritiek is. Dit baseren wij op dat de NOC is gebaseerd op het aantal kinderen een class heeft, en hoe meer kinderen, hoe groter de kans op fout. Bij $\geq3$ is de kans op fouten volgens onze mening zeer goed aanwezig.\\
-       Wanneer een waarde kritiek is voor een bepaald metriek, staat er in onderstaande tabel \begin{em}kritiek\end{em}. Wanneer er niets staat is de waarde niet kritiek. Er is uitgegaan dat de classes zijn geschreven in de taal JAVA. Indien de waarde uitmaakt voor de kritieke waarde, en de kritieke waarde voor C++ anders is, staat dit tussen haakjes. \\ 
+       Wanneer een waarde kritiek is voor een bepaald metriek, staat er in onderstaande tabel \begin{em}kritiek\end{em}. Wanneer er niets staat is de waarde niet kritiek. Er is uitgegaan dat de classes zijn geschreven in de taal JAVA, zoals vermeld in de opdracht. Echter indien de waarde uitmaakt in welke taal (JAVA of C++) de class is geschreven voor de kritieke waarde, staat de waarde voor C++ tussen haakjes. \\ 
          De waarde voor RFC is in alle gevallen kritiek. De waarde ligt flink boven de aangegeven kritieke waarde, welke tevens ook zeer hoog boven de kritieke waarde ligt. De kritieke waarde voor RFC ic $\geq50$, terwijl de laagste waarde voor RFC van de classes 127 is. \\
          De waarde voor DIT ligt in alle gevallen onder de kritieke waarde van 5. 
        \begin{center}
@@ -435,7 +435,7 @@
    
    \subsubsection[Opdracht 2]{Bepaald WMC, DIT, NOC, CBO, RFC en LCOM van de volgende pseudo objecten broncode:}
    \begin{center}
-   \begin{tabular}[t]{|l|l|}
+   \begin{tabular}{|l|l|}
      \hline
      Class & trade \\
      Variables & trade.id, counterparty, trade\_value \\
@@ -480,4 +480,96 @@
      \hline
    \end{tabular}
    \end{center}
+   In de tabel hieronder staan alle waarde voor de verschillende metrieken. Onder de tabel staat de uitleg erbij met de berekening van de verschillende metrieken. Tevens staat in de tabel hieronder of de waarde kritiek is voor het type metriek.
+   \begin{center}
+     \begin{tabular}{|l||l|l|}
+       \hline
+       Metriek & Waarde & Kritek \\
+       \hline
+       WMC & 11 & Nee \\
+       \hline
+       DIT & & \\
+       \hline
+       NOC & & \\
+       \hline
+       CBO & & \\
+       \hline
+       RFC & & \\
+       \hline
+       LCOM & & \\
+       \hline
+      \end{tabular}
+   \end{center}
+   \begin{center}\begin{bf}WMC\end{bf}\end{center}
+   WMC houd in dat er voor iedere methode in een class 1 wordt geteld. Voor iedere routine in die methode word daarbij nog 1 opgeteld. Er is in dit geval maar bij één class in een methode een routine aanwezig.
+   \begin{bf}Class trade\end{bf}\\
+     De WMC van de class trade is als volgt:
+     \begin{itemize}
+       \item 3 methodes: 3
+       \item Geen routines
+     \end{itemize}
+     De WMC van de class trade is 3.\\
+   \begin{bf}Class bondtrade\end{bf}\\
+     De WMC van de class bondtrade is als volgt:
+     \begin{itemize}
+       \item 1 methode: 1
+       \item Geen routines
+     \end{itemize}
+     De WMC van de class bondtrade is 1.\\
+    \begin{bf}Class fx\_trade\end{bf}\\
+    De WMC van de class fx\_trade is als volgt:
+    \begin{itemize}
+      \item 1 methode: 1
+      \item Geen routines
+    \end{itemize}
+    De WMC van de class fx\_trade is 1.\\
+    \begin{bf}Class equity\_trade\end{bf}\\
+    De WMC van de class equity\_trade is als volgt:
+    \begin{itemize}
+      \item 2 methodes: 2
+      \item Geen routines
+    \end{itemize}
+    De WMC van de class equity\_trade is: 2.\\
+    \begin{bf}Class municipal\_bond\_trade\end{bf} \\
+    De WMC van de class municipal\_bond\_trade is als volgt:
+    \begin{itemize}
+      \item 1 methode: 1
+      \item Geen routines
+    \end{itemize}
+    De WMC van de class municipal\_bond\_trade is: 1.\\
+    \begin{bf}Class corporate\_bond\_trade\end{bf}\\
+    De WMC van de class corporate\_bond\_trade is als volgt:
+    \begin{itemize}
+      \item 1 methode: 1
+      \item 1 routine: 1
+    \end{itemize}
+    De WMC van de class corporate\_bond\_trade is: $1 + 1 = 2$.\\
+    \begin{bf}Class international\_equity\end{bf}\\
+    De WMC van de class international\_equity is als volgt:
+    \begin{itemize}
+      \item 1 methode: 1
+      \item geen routines
+    \end{itemize}
+    De WMC van de class international\_equity is: 1\\
+    \begin{bf}Class domestic\_equity\end{bf}\\
+    De WMC van de class domestic\_equity is als volgt:
+    \begin{itemize}
+      \item Geen methode
+      \item geen routines
+    \end{itemize}
+    De WMC van de class domestic\_equity is: 0 \\
+    \begin{bf}Totale WMC\end{bf}\\
+      De totale WMC is als volgt: \\
+      \begin{displaymath}
+        3 + 1 + 1 + 2 + 1 + 2 + 1 = 11
+      \end{displaymath}
+   \begin{center}\begin{bf}DIT\end{bf}\end{center}
+
+   \begin{center}\begin{bf}NOC\end{bf}\end{center}
+
+   \begin{center}\begin{bf}CBO\end{bf}\end{center}
+
+   \begin{center}\begin{bf}RFC\end{bf}\end{center}
+
+   \begin{center}\begin{bf}LCOM\end{bf}\end{center}
 \end{document}
