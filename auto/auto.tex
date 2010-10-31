@@ -492,11 +492,11 @@
        \hline
        NOC & Zie hieronder & \\
        \hline
-       CBO & & \\
+       CBO & 4 & Nee, maar zie hieronder\\
        \hline
-       RFC & & \\
+       RFC & 16 & Nee, maar zie hieronder \\
        \hline
-       LCOM & & \\
+       LCOM & Zie hieronder & \\
        \hline
       \end{tabular}
    \end{center}
@@ -568,8 +568,42 @@
    \begin{center}\begin{bf}NOC\end{bf}\end{center}
    NOC geeft een indicatie wat een bepaalde class voor uitoefining heeft op zijn kinderen. Hierbij geeft een hoge NOC aan dat de classes slechter te testen zijn. Er is geen vaste waarde voor de NOC welke slecht is, maar een hogere NOC kan problemen opleveren. Net als bij de DIT is de NOC afhankelijk van de kinderen/ouders. Doordat dit niet is aangegeven in de pseudocode is het niet te berekenen wat de NOC is. Mogelijk zijn er geen kinderen, en is de NOC 0.
    \begin{center}\begin{bf}CBO\end{bf}\end{center}
-
+   Bij CBO wordt gekeken naar afhankelijkheid van andere classes welke niet door overerving gekoppeld zijn. Doordat in dit geval geen relates zijn opgegeven in de pseude code gaan we ervan uit dat alle methode calls welke uitgevoerd worden niet door overerving zijn bedoeld. De volgende classes hebben geen methode calls buiten hun eigen class, en de CBO is dus 0:
+   \begin{itemize}
+     \item bond\_trade
+     \item fx\_trade
+     \item dometic\_equity
+   \end{itemize}
+   De volgende classes hebben allemaal \'{e}\'{e}n methode call buiten hun eigen class:
+   \begin{itemize}
+     \item equity\_trade
+     \item municipal\_bond\_trade
+     \item corporate\_bond\_trade
+     \item international\_equity
+   \end{itemize}
+   De CBO van de classes is totaal bij elkaar dus 4. De CBO hoort in principe $<5$ te zijn, algemeen aangenomen. Dit is het geval in de bovenstaande classes. Bij een hogere CBO wordt de koppeling groot, en is de modulariteit van het ontwerp in het geding. Dit kan betekenen dat de classes lastig te zijn hergebruiken, terwijl juist de bedoeling van het gebruik van classes is dat deze goed te zijn hergebruiken. In bovenstaand voorbeeld kom ik in dit geval tot een andere conclusie. Doordat er, zover te zien in de pseudecode, geen overerving is, zijn alle classes afhankelijk van elkaar, dit zorgt er in dit specifieke geval dus voor dat \'{e}\'{e}n losse klas eigenlijk helemaal niet makkelijk los te gebruiken is. Dit komt doordat de CBO gemaakt is voor grotere stukken code, terwijl het voorbeeld hier zeer minimaal is. Volgens de standaard is de code dus eigenlijk niet kritiek, maar ik durf te zeggen dat deze dat wel is.
    \begin{center}\begin{bf}RFC\end{bf}\end{center}
-
+   De RFC telt het aantal methode in een class, plus het aantal externe methode welke aangeroepen worden. Het resultaat van de metriek is de intensiviteit van de communicatie met andere classes. Het is aan te raden om de RFC op $\leq50$ te houden. Hierboven wordt de waarde van de complexiteit te hoog waardoor het lastig wordt om de class te wijzigen en de class te snappen.
+   \\
+   De volgende classes hebben geen externe methode welke aangeroepen. Hierbij is de RFC van die class gelijk aan het aantal methode:
+   \begin{itemize}
+     \item bond\_trade: 1 methode
+     \item fx\_trade: 1 methode
+     \item domestic\_equity: 0 methodes
+   \end{itemize}
+   De RFC van deze 3 classes is dus bij elkaar 2.
+   De volgende classes hebben naast normale methode ook methode welke extern aangeroepen worden. Hierbij is de RFC van die class gelijk aan het aantal methoden plus het aantal extern aangeroepen methoden. Het aantal externe methodes welke aangeroepen worden is in alle gevallen \'{e}\'{e}n.
+   \begin{itemize}
+     \item trade: 3 methodes
+     \item equity\_trade: 2 methodes
+     \item municipal\_bond\_trade: 1 methode
+     \item corporate\_bond\_trade: 1 methode
+     \item international\_equity: 2 methodes
+   \end{itemize}
+   In totaal is de RFC voor deze 5 classes: $3 + 2 + 1 + 1 + 2 + 5 = 14$. De $5$ in de berekening komt van de extern aangeroepen methode.
+   In totaal is de RFC van alle classes totaal $2 + 14 = 16$. De kritieke waarde voor RFC van classes is $\leq50$, en volgens de eigenlijke standaard is de RFC niet kritiek. Maar net als bij de CBO durf ik te stellen dat in dit geval de pseudo code niet duidelijk genoeg is, waardoor de eigenlijke complexiteit van de classes toch te hoog is, terwijl de RFC toch binnen de aangegeven waarde valt. Wanneer er duidelijker in de pseudecode wordt aangegeven wat de exacte classes zijn, en wanneer deze ook duidelijke referenties aangeven kan er een betere conclusie worden getrokken uit de waarde.
    \begin{center}\begin{bf}LCOM\end{bf}\end{center}
+   De LCOM geeft aan in hoeveel een class met elkaar in verband staan. Hierbij wordt gekeken naar de gemeenschappelijk object variable. Hoe lager de LCOM, hoe beter de class samenwerkt. Wanneer de LCOM te hoog is, is de samenhang niet goed en moet de class eigenlijk gesplitst worden in meerdere losse classes. In het meest gunstige geval is de LCOM $\leq1$, wat een goede samenhang betekend.\\Doordat de pseudecode niet aangeeft welke object variable gebruikt worden in een bepaalde methode is het niet te doen om de LCOM te berekenen. Om de LCOM te kunnen berekenen zal er in de pseudocode moeten worden weergeven welke object variable er in die methode gebruikt wordt.
+   \begin{center}\begin{bf}Conclusie\end{bf}\end{center}
+   Zoals hierboven al geschreven kunnen de DIT, NOC en LCOM niet berekend worden doordat de vereiste gegevens missen in de pseudo code. Wanneer de vereiste gegevens wel gegeven waren konden deze drie metrieken vrij eenvoudig berekend worden. Echter, om tot een goed resultaat te komen, zoals bij een normaal project echt gebruikt wordt zal de code welke gebruikt wordt om deze opdracht te maken flink uitgebreid moeten worden. De huidige resultaten uit de diverse metrieken komen niet goed overeen met de eigenlijke complexiteit van de gegeven code. Dit komt doordat de code welke aanwezig is zo klein is dat je weinig complexiteit ziet in de metrieken. Maar wanneer je gaat kijken naar de diverse methode en classes hoe ze in elkaar zitten zie je dat alle classes eigenlijke afhankelijk zijn van elkaar. Om deze redenen zijn de classes dus niet correct opgebouwd en kan de opgegeven classes niet hergebruiken, terwijl dit uitendelijk wel het orginele doel is van het gebruik van classes. Om dit toch te kunnen bewerkenstellen zouden alle aanwezige classes welke er zijn herschreven moeten worden, zodat ze data welke universeel is accepteren. Tevens zouden de extern aangeroepen methode verkleint moeten worden met het huidige aantal. Wanneer dit gebeurd is zulleen de classes uit de pseudocode niet alleen beter uit de verschillende metrieken komen, maar ook beter herbruikbaar zijn voor de verschillende opdrachten.
 \end{document}
