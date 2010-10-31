@@ -36,4 +36,4 @@
 \contentsline {section}{\numberline {5}\bfseries Week 5}{9}
 \contentsline {subsection}{\numberline {5.1}\slshape Opdrachten bij hoofdstuk 7}{9}
 \contentsline {subsubsection}{\numberline {5.1.1}\rmfamily Opdracht 1}{9}
-\contentsline {subsubsection}{\numberline {5.1.2}\rmfamily Opdracht 2}{10}
+\contentsline {subsubsection}{\numberline {5.1.2}\rmfamily Opdracht 2}{11}
