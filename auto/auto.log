@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  31 OCT 2010 15:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  31 OCT 2010 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -145,56 +145,67 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [2] <H1O4.png, id=18, 1003.75pt x 501.875pt>
 File: H1O4.png Graphic file (type png)
  <use H1O4.png>
-Overfull \hbox (48.90588pt too wide) in paragraph at lines 40--41
-[] 
+Overfull \hbox (48.90588pt too wide) in paragraph at lines 40--44
+[]
  []
 
-[3 <./H1O4.png (PNG copy)>]
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+
+ []
+
+[4 <./H1O4.png (PNG copy)>] [5]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 87.
+(Font)              <7> on input line 90.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 87.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
- (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+(Font)              <5> on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
+ [6]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
 
  []
 
-[7] (/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
+[9] (/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
 )
-<H5O1A.png, id=40, 611.28375pt x 263.48438pt>
+<H5O1A.png, id=46, 611.28375pt x 263.48438pt>
 File: H5O1A.png Graphic file (type png)
  <use H5O1A.png>
-Overfull \hbox (5.49379pt too wide) in paragraph at lines 306--307
+Overfull \hbox (5.49379pt too wide) in paragraph at lines 310--311
 [][] 
  []
 
 
-Overfull \hbox (9.3246pt too wide) in paragraph at lines 310--329
+Overfull \hbox (9.3246pt too wide) in paragraph at lines 314--333
 [][] 
  []
 
-[8 <./H5O1A.png (PNG copy)>] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+[10 <./H5O1A.png (PNG copy)>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-[10] [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 560--563
+[12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 564--567
 
  []
 
-[13] [14] (./auto.aux) ) 
+[15] [16] (./auto.aux) ) 
 Here is how much of TeX's memory you used:
  2243 strings out of 495006
  28777 string characters out of 1181409
- 101422 words of memory out of 3000000
+ 101424 words of memory out of 3000000
  5414 multiletter control sequences out of 15000+50000
  8002 words of font info for 28 fonts, out of 3000000 for 9000
  68 hyphenation exceptions out of 8191
@@ -210,9 +221,9 @@ cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 </usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texl
 ive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on auto.pdf (15 pages, 262127 bytes).
+Output written on auto.pdf (17 pages, 268484 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

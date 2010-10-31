@@ -28,29 +28,33 @@
   \subsection{Opdrachten bij hoofdstuk 1}
    \subsubsection[Opdracht 1]{Geef voorbeelden van computerprogramma's die voornamelijk ontwikkeld worden volgens het watervalmodel}
    Een pakket als MS Office zou volgens dit model ontwikkeld worden omdat het van te voren bepaalde eisen heeft aan de functionaliteit. 
-   Zodra het basis pakket ontwikkeld is zal er niet veel meer veranderd worden aan het uitendelijke doel van het programma.
+   Zodra het basis pakket ontwikkeld is zal er niet veel meer veranderd worden aan het uitendelijke doel van het programma. Een uitzonder is hierop dan weer wanneer het complete pakket herschreven zal worden. Dit zal echter niet vaak gebeuren, omdat dit betekend dat je een groot aantal werkuren welke besteed zijn aan het project/programma opnieuw moet gebeuren, terwijl je uiteindelijk op dezelfde functionaliteit uitkomt. Wat wel gebeurd is dat er extra functionaliteit kan worden toegevoegd aan het programma, of bijvoorbeeld een nieuwe User Interface wordt ontwikkeld voor het programma. Op deze manier werken ze nog steeds volgens het watervalmodel, ze passen tenslotte niks aan aan de eisen voor functionaliteit.
    
    \subsubsection[Opdracht 2]{Geef voorbeelden van computerprogramma's die voornamelijk ontwikkeld worden met prototyping.}
-   Een goed voorbeeld hierbij is een project op school. Hierbij wordt eigenlijk bijna direct begonnen met het werken aan het eindproduct, terwijl er nog niet echt bedacht is wat het eindproduct moet worden. Op diverse punten tijdens de ontwikkeling van het programma zal het eisenpakket worden aangepast naar de uiteiendelijke wensen.
+   Een goed voorbeeld hierbij is een project op school. Hierbij wordt eigenlijk bijna direct begonnen met het werken aan het eindproduct, terwijl er nog niet echt bedacht is wat het eindproduct moet worden. Op diverse punten tijdens de ontwikkeling van het programma zal het eisenpakket worden aangepast naar de uiteindelijke wensen. In een hoop gevallen zie je bij dit soort projecten op school ook dat het eisenpakket compleet wordt overgeslagen, en er gewoon zo los gewerkt wordt. Hierbij zijn de eisen eigenlijk hetgeen waar het uiteindelijk product aan voldoet en niet zoals het van te voren is omschreven. 
    
    \subsubsection[Opdracht 3]{Wat is het verschil tussen validatie en verificatie}
-   Bij validatie (Valideren) wordt gekeken of het ontwerp voldoet aan het eisenpakket, terwijl er bij verificatie wordt gekeken of het process voldeed.
+   Bij validatie (Valideren) wordt gekeken of het ontwerp voldoet aan het eisenpakket, terwijl er bij verificatie wordt gekeken of het process voldeed. Het kan dus zijn dat bij het valideren het ontwerp voldoet, terwijl de verificatie zegt dat het process niet goed is verlopen, of omgekeerd. 
    
    \subsubsection[Opdracht 4]{Hoe zou u de ontwikkeltrajacten van het waterval-, het incremenetele- en het evolutionare model aangeven in figuur 1.1?}
    \includegraphics[scale=0.5]{H1O4.png}
+   Bij het watervalmodel is duidelijk te zien dat het eerst naar het abstracte gaat voordat het systeem echt ontwikkeld wordt. Hierbij wordt dus duidelijk eerste naar het eisenpakket gekeken, en daarna pas gewerkt aan het systeem zelf. \\
+   Bij het evolutionare systeem zie je ook dat er ligt wordt gewerkt naar het abstracte van het systeem, maar zie je ook dat zodra er een deel klaar is weer wordt teruggegaan van het structurele van het systeem naar het concrete en weer terug.\\
+   Als laatste bij het incrementele model zie je dat er iedere keer een klein stukje abstract wordt gemaakt welke dan ontwikkeld wordt, en hierna weer doorgaat naar het abstracte om verder te ontwikkelen. Dit blijft iedere keer doorgaan tot er op een gegeven moment bij het eind een eindproduct is. Het is ook mogelijk in dit geval dat er uiteindelijk geen eindproduct is, maar de ontwikkeling steeds maar door blijft gaan.
    
    \subsubsection[Opdracht 5]{Zal de evolutionare ontwikkelstrategie de grens tussen ontwikkeling en onderhoud laten verdwijnen?}
-   Ja, zodra je onderhoud doet kan je tegelijkertijd ook nieuwe, door de klant gewenste, features kunnen toevoegen aan het al bestaande programma. 
+   Ja, zodra je onderhoud doet kan je tegelijkertijd ook nieuwe, door de klant gewenste, features kunnen toevoegen aan het al bestaande programma. Hierdoor is zowel voor de klant als voor de ontwikkelaar eigenlijk niet meer te zien welk deel van de aanpassingen welke gedaan worden aan het bestaande programma nu eigenlijk onderhoud is en welk deel nu eigenlijk nieuwe features zijn. Dit kan voor beide partijen verwarring geven doordat ze niet weten of een bepaald onderdeel nu zomaar toegevoegd kan worden. Een betere methode om te gebruiken is een ontwikkel branch, en een onderhouds branchs, waarbij de wijzigingen in de onderhouds branch ook worden samengevoegd in de ontwikkelings branch (Automatische of met de hand. Door gebruik te maken van versie beheer systemen zoals SVN of GIT is dit zeer eenvoudig te doen). Zodra de ontwikkelingsbranch goed werkt, en de klant hiermee akkoord gaat kan die samengevoegd worden in de ontwikkelingsbranch welke dan de live applicatie mee kan worden ge\"{u}pdate worden. Op deze manier weet zowel de ontwikkelaar als de klant wat de status is van de huidige live branch en onderstaat er geen verwarring.
    
    \subsubsection[Opdracht 6]{Zoek op internet voorbeelde van repositories.}
-   Een voorbeeld hiervan zijn de door debian gebruikte repositories, waaruit alle Debian installaties software vandaan installeren.
+   Een voorbeeld hiervan zijn de door Debian gebruikte repositories, waaruit alle Debian installaties software vandaan installeren. In deze repositories staat de al gecompileerde software opgeslagen voor de door de gebruiker gebruikte port, en kan eenvoudig worden gedownload van deze repositories en daarna geistalleerd. Op deze manier zijn updates naar de gebruiker eenvoudig uit te voeren doordat de gebruiker direct kan zien welke versie nieuw is bij het ophalen van het index bestand van het repositorie. Het nadeel van het gebruik van dit soort repositories is dat wanneer de gebruiker iets wilt wijzigen aan de compiliatie opties van de gebruikte software hij dit niet zomaar kan doen. Wanneer hij dit toch wilt doen zal hij zelf een eigen repositorie op moeten zetten en dan de software compilen en inpakken. Door een eigen repositorie te gebruiken kan de gebruiker nog steeds eenvoudig gebruik maken van de voordelen van het gebruik van een repositorie terwijl hij qua tijd niet voor meer tijd kwijt is als het los compileren van een programma. Wanneer de software echter op maar \'{e}\'{e}n installatie gebruikt wordt met de aangepast opties is het sneller/makkelijker om toch deze los te compileren en er niet een eigen pakket van te maken. \\\\
+   Een ander goed voorbeeld van een repositorie is het gebruik van versie controle systemen, zoals git of svn. Dit soort systemen slaan in een repositorie op welke bestanden aanwezig zijn en wie welke wijziging gedaan heeft. Door gebruik te maken van een VCS kan een groep ontwikkelaars eenvoudig samenwerken aan dezelfde bestanden. Het VCS systeem zorgt ervoor bij eventueele conflicten dat de gebruiker gewaarschuwd wordt en deze, indien automatische samenvoeging niet werkt, moet samenvoegen. De verschillende systemen hebben allemaal hun eigen voor en nadelen bij gebruik en de keuze van de systemen hangt dus grotendeels af van wat de voorkeur van de gebruikers is. Ze hebben allemaal wel als doen om op te slaan wie welke wijziging wanneer heeft uitgevoerd.
    
    \subsubsection[Opdracht 7]{Geef de voor en nadelen van open-source software.}
    Een groot voordeel is dat de sourcecode van de applicatie/programma vrijelijk te bekijken is. Hierdoor zie je dat bijvoorbeeld security problemen welke in deze source code aanwezig zijn sneller gevonden worden en hierdoor het algemener bekend is of software veilig is of niet.
    \\
    Helaas is dit grote voordeel ook direct een nadeel. Wanneer een security probleem gevonden wordt in een applicatie/programma en dit wordt niet opgelost door de vendor kan dit makkelijk misbruikt worden door de vaak uitgebreide verspreiding van de software. 
    \\ 
-   Om dit probleem in het geheel op te lossen zal je dus een combinatie moeten maken tussen veilig gebruik van software (Kijkend naar de geschiedenis van software) en ander soort software.
+   Om dit probleem in het geheel op te lossen zal je dus een combinatie moeten maken tussen veilig gebruik van software (Kijkend naar de geschiedenis van software) en ander soort software. Je kan hierbij bijvoorbeeld ook nog kijken of de software vendor patches accepteert van derden, waardoor je zelf wijzigingen kan doorvoeren en deze uitendelijk in het orginele product opgenomen worden. Dit heeft grote voordelen voor zowel de software vendor als de gebruiker.
    
    \subsubsection[Opdracht 8]{De eis ''Alle uitvoer moet normaal binnen 10 seconden gegeven worden'' is om \'{e}\'{e}n van de volgende redenen fout. Welke?}
    \begin{itemize}
@@ -58,12 +62,12 @@
     \item[b] Niet concreet
     \item[c] Tegenstrijdig
    \end{itemize}
-   De eis is niet concreet genoeg, doordat alle uitvoer heel algemeen is. Een verbetering op deze eis zou zijn:\\
-   ''De klant moet binnen 10 seconden een bevestiging van zijn bestelling op het scherm zien.''
-   
+   De eis is niet concreet genoeg, doordat alle uitvoer heel algemeen is. De programmeur heeft dus met de huidige eis geen idee wat verstaan wordt onder alle uitvoer. Dit kan bijvoorbeeld alleen zijn dat de bestelling geplaatst is, maar ook dat de bestelling direct verzonden is. \\Een verbetering op deze eis zou zijn:\\
+   ''De klant moet binnen 10 seconden een bevestiging van zijn bestelling op het scherm zien.''\\
+   Met deze nieuwe eis kan de programmeur zijn wat de eis is wat de klant te zien moet krijgen en dan ook daadwerkelijk dit programmeren. Zo zal er nooit een tegenstrijdigheid zijn tussen de programmeur en de opdrachtgever, want er staat duidelijk in de eis wat er moet zijn.
    
    \subsubsection[Opdracht 9]{Wat mankeert er aan de eis: ''Het bestand moet een afsluitteken bevatten.''?}
-   De eis is onduidelijk, doordat het afsluitteken niet is vastgesteld in de eis. 
+   De eis is onduidelijk, doordat het afsluitteken niet is vastgesteld in de eis. De programmeur kan dus niet simpel voldoen aan de eis zonder contact op te nemen met de opdrachtgever om te vragen wat er precies gedaan moet worden. Om de eis correct op te stellen moet het afsluitteken vermeld worden in de eis, wanneer deze wel aanwezig is kan de programmeur direct werken met de eis zonder verdere handelingen te moeten verichten om de opdracht uit te kunnen voeren.
    
    \subsubsection[Opdracht 10]{Welke maatregelen kunnen positief of negatief werken op:}
    \begin{itemize}
@@ -72,24 +76,24 @@
     \item[c] De herstelbaarheid
    \end{itemize}
    \begin{itemize}
-     \item[a] Regelmatige validatie en verificatie tijdens alle stappen van het project.
-     \item[b] Het systeem zo laten functioneren dat, mocht er een storing plaatsvinden in een bepaald gedeelte, dat de rest van het systeem nog naar behoren blijft functioneren.
-     \item[c] Optimalisatie van de programmatuur.
+     \item[a] Regelmatige validatie en verificatie tijdens alle stappen van het project. Hiermee wordt er gecontroleerd of de tot dan toe ontwikkelde programma's voldoen aan de gestelde eisen door de opdrachtgever.
+     \item[b] Het systeem zo laten functioneren dat, mocht er een storing plaatsvinden in een bepaald gedeelte, dat de rest van het systeem nog naar behoren blijft functioneren. Hierbij kan gedacht worden aan testen in een gesimuleerde omgeving en aan testen in een real live omgeving zonder dat de omgeving dan ook echt gebruikt wordt. Ook monitoring is hierbij belangerijk, zodra de omgeving daadwerkelijk in gebruik is.
+     \item[c] Optimalisatie van de programmatuur. 
    \end{itemize}
    
  \section{Week 2}
   \subsection{Opdrachten bij hoofdstuk 3}
    \subsubsection[Opdracht 1]{De projectkosten worden begroot op
-   100000euro. De winst wordt gesteld op 15\%.Het risico dat men met dit
-   project denkt te lopen, is gebaseerd op de ervaring dat 20\% van dit
-   soort projecten mislukken. De BTW bedraagt 19\%. Hoeveel is de
+   100000 euro. De winst wordt gesteld op $15\%$.Het risico dat men met dit
+   project denkt te lopen, is gebaseerd op de ervaring dat $20\%$ van dit
+   soort projecten mislukken. De BTW bedraagt $19\%$. Hoeveel is de
    aanbestedingsprijs?}
    \begin{displaymath}
-    (100*1.15*1.2)*1.19={164.20}euro
+    (100.000,00*1,15*1,2)*1,19={164.220,00}euro
    \end{displaymath}
    
    \subsubsection[Opdracht 2]{Wat zijn de verschillen tussen kosten en investeringen?}
-   Kosten zijn uitvagen die direct van de winst mogen worden afgetrokken. Inversteringen daarintegen moeten over meerdere jaren worden afgeschreven. Die jaarlijkse afschrijven mogen wel als kosten worden opgevoerd.
+   Kosten zijn uitgaven die direct van de winst mogen worden afgetrokken. Investeringen daarintegen moeten over meerdere jaren worden afgeschreven. Die jaarlijkse afschrijvingen mogen wel als kosten worden opgevoerd.
    
    \subsubsection[Opdracht 3]{Noem 3 investeringscriteria}
    \begin{itemize}
@@ -121,8 +125,8 @@
 	    \frac{98345.34}{6100-100}=16.39
 	   \end{displaymath}
 	   \\
-           Het omslagpunt ligt dan bij $16.36$ maanden.
-     \item Welke overweging kan bij deze keuze een belangerijke rol spelen?\\De duurzaamheid of het gebruik van de inverstering. Hieruit bepaal je dan of het goedkoper is om te kopen of juist andersom.
+           Het omslagpunt ligt dan bij $16.39$ maanden.
+     \item Welke overweging kan bij deze keuze een belangerijke rol spelen?\\De duurzaamheid of het gebruik van de inverstering. Hieruit bepaal je dan of het goedkoper is om te kopen of juist om het productiemiddel te huren.
     \end{itemize}
     
  \section{Week 3}
