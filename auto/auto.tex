@@ -321,7 +321,7 @@
          \hline
          C 3 &      &      &  --- & ---  & ---  &      &      &      &      &       &        &        &        &\\
          \hline
-         D 2 &      &      &      &      &      &      & - - -& - - -&      &       &        &        &        &\\
+         D 2 &      &      &      &      &      &      & - - -& - - -& - - -& - - - &        &        &        &\\  
          \hline
          E 6 &      &      &      &      &      & ---  & ---  & ---  & ---  & ---   & ---    &        &        &\\
          \hline     
@@ -351,6 +351,7 @@
      K & 2 & H \\
      \hline
      \end{tabular}
+     \includegraphics[scale=0.5]{H5O12.png}
    \end{center}
    \subsubsection[Opdracht 3]{Van een collectief team is gegeven dat de verliesfactor per communicatiekaneel 5\% is, bereken de maximale groepsgrootte}
    \begin{displaymath}
@@ -361,7 +362,13 @@
    \begin{displaymath}
      \lfloor^6\log{(5N+1)}\rfloor\leq echelons\leq N
    \end{displaymath}
-   De $6$ in de log geeft aan hoeveel ondergeschikten er in een echelon zijn. Wanneer je de $6$ veranderd naar een hoger of lager getal zal de waarde van N veranderen naar een nieuw maximaal aantal wat werkbaar is binnen een team. Tevens veranderd hierin het aantal echelons ook negatief, wat betekend dat de communcatie en informatie overdracht tussen de verschillende echelons wordt vergroot. Alle informatie moet tenslotte eerste naar de bovenste echelon welke hier dan weer de informatie teruggeeft naar de ondergeschikte welke de benodigde informatie heeft bij \'{e}\'{e}n van zijn ondergeschikte. Wanneer dit niet via de bovenste echelonn zou gaan zou de bovenste echelon niet de benodigde informatie hebben welke hij nodig heeft om het project goed te kunnen leiden. Het gebruik van de hi\"{e}rarchieke structuur heeft grote voordelen bij grote projecten met veel verschillende bedrijven/onderdelen, doordat er een globaal overzicht is over hoever het project gevorderd is. Het nadeel blijft ook hier dat de informatie voorziening lastig kan zijn bij een groot aantal echelons.
+%   De $6$ in de log geeft aan hoeveel ondergeschikten er in een echelon zijn. Wanneer je de $6$ veranderd naar een hoger of lager getal zal de waarde van N veranderen naar een nieuw maximaal aantal wat werkbaar is binnen een team. Tevens veranderd hierin het aantal echelons ook negatief, wat betekend dat de communcatie en informatie overdracht tussen de verschillende echelons wordt vergroot. Alle informatie moet tenslotte eerste naar de bovenste echelon welke hier dan weer de informatie teruggeeft naar de ondergeschikte welke de benodigde informatie heeft bij \'{e}\'{e}n van zijn ondergeschikte. Wanneer dit niet via de bovenste echelonn zou gaan zou de bovenste echelon niet de benodigde informatie hebben welke hij nodig heeft om het project goed te kunnen leiden. Het gebruik van de hi\"{e}rarchieke structuur heeft grote voordelen bij grote projecten met veel verschillende bedrijven/onderdelen, doordat er een globaal overzicht is over hoever het project gevorderd is. Het nadeel blijft ook hier dat de informatie voorziening lastig kan zijn bij een groot aantal echelons.
+   In 1 echelon passen ongeveer 6 mensen.\\
+   In 2 echelons passen ongeveer $36+6$ mensen.\\
+   In $x$ echelons passen dus ongeveer $6^x$ mensen: $N=6^x$. \\
+   Als het aantal mensen variabel is $(N)$, zou de functie voor het aantal echelonen een Log functie worden: $^6\log{(6N)}$. \\ \\
+   $N$ is niet gewoon 6, maar $5N+1$ (Omdat men moet communiceren met een bovenliggende echelon), dus $^6\log{(5N+1)}$ \\ \\
+   De 6 in de log geeft aan hoeveel ondergeschikten er in een echelon zijn. Wanneer je de 6 veranderd naar een hoger of lager getal zal de waarde van N veranderen naar een nieuw maximaal aantal wat werkbaar is binnen een team. Een hogere waarde in plaats van een 6 geeft een lagere hoeveelheid echelons en omgekeerd.
    \section{Week 5}
    \subsection{Opdrachten bij hoofdstuk 7}
    \subsubsection[Opdracht 1]{Van een objectgeori\"{e}nteerd computerprogramma in Java, zijn van alle classes de metrieken NOM,CBO, RFC, WMC, DIT en NOC gemeten. Een tiental classes had een verhoogd risico.}
