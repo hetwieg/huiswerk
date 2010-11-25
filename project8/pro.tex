@@ -17,12 +17,50 @@
 
 
 \author{Paul Sohier 0806122\\Sebastiaan Polderman 0820738}
-\title{Project 8}
+\title{Project 7 \& 8\\Tentamen registratie systeem}
 
 
 \begin{document}
 \maketitle
+%\section{Samenvatting}
+\begin{abstract}
+test
+\end{abstract}
+%\newpage
 \tableofcontents
 \newpage
+\section{Project omschrijving}
+Het doel van dit project en dit document is het uitleggen van de algemene status van het project en wat het project in het algemeen inhoud. De opdracht van het project het zelf verzinnen van een opdracht welke pasten in de projectomschrijving. Hierbij was het belangerijk dat het project tastbaar was en dat er tevens ook gebruik gemaakt werd van software welke zelfgeschreven was. \\
+Wij hebben gekozen om een tententamen registratie systeem te maken. Dit idee is gebaseerd op een bij het CBR in gebruik zijnde systeem voor het afnemen van theorie examens. Het doel van het systeem is dat de Hoge School, en andere scholen, gebruik kunnen maken van dit systeem en daardoor eenvoudig meerkeuze tentamens kunnen afnemen. De student krijgt direct na het tentamen de uitslag te zien van zijn tentamen, en de docent hoeft het resultaat enkel nog te verwerken in het cijfer registratie systeem.\\
+Het systeem bestaand in principe uit twee onderdelen. Dit zijn:
+\begin{itemize}
+  \item De computer. Deze handelt alle data af welke binnen komt vanuit de lossen kastjes waarop de studenten hun antwoord ingeven. Tevens weergeeft de computer de vraag aan de student en laat de computer zien hoeveel tijd de student nog heeft.
+  \item Het tentamen kastje. De student vult hierop zijn antwoord in door op de bijbehorende knop te drukken voor een bepaald antwoord. De student krijgt hierna feedback van het kastje over welk antwoord is opgegeven. Deze feedback wordt gedaan in de vorm van een led bij de knop van het ingevulde antwoord. Zolang de tijd nog niet verstreken is kan de student tevens ook nog zijn opgegeven antwoord wijzigen door op een andere knop te drukken. Zodra de tijd over is is deze wijziging echter niet meer mogelijk. De feedback wordt pas aan de student gegeven zodra de computer bevestigt heeft dat hij het antwoord ontvangen heeft. Dit kan dus in theorie enige tijd duren. Zie hiervoor ook het deel met betrekking tot de communicatie welke gebruikt wordt.
+\end{itemize}
+De computer regelt het gehele tentamen en ontvangt via bedrade communicatie de resultaten van de studenten. Deze resultaten worden hierna lokaal op de computer opgeslagen en aan het eind van het tentamen aan de student op de computer weergeven. De tentamen kastjes bevatten enkel en alleen en aantal knoppen, er zit geen LCD display op het kastje. Om toch ervoor te zorgen dat de goede student bij het goede tentamen kastje zit moet er van te voren door de docent worden gecontroleerd of de correct student op de correcte plaats zit. \\
+Het tentamen kastje bestaat uit een microcontroller welke de communicatie en knopdetectie afhandeld. Voor de rest is dit kastje een in principe zeer dom kastje. De hardware in dit kastje bestaat puur uit de microcontroller en het communicatie IC.
+\subsection{Software}
+De software bestaat uit twee delen. Op de computer draait software geschreven in java welke het hele tentamen weergeeft en bijhoud wie welk antwoord heeft ingevult. Op de microcontroller wordt gebruik gemaakt van de taal C. 
+\subsubsection{Computer}
+De software van de computer is onderverdeeld in 3 delen:
+\begin{itemize}
+  \item Vragen weergave \\
+    Dit deel van de software zorgt ervoor dat de vragen voor de studenten worden weergeven aan de studenten zodat deze de vraag kunnen beantwoorden. Tevens zorgt het ervoor dat de tijd die nog over is wordt weergeven op het scherm. Zodra deze tijd over is zal er even worden gewacht om te zorgen dat de kastjes de communicatie af kunnen maken totdat alle kastjes geantwoord hebben.
+  \item Communicatie \\
+    Dit deel van de software zorgt ervoor dat de communcatie met de kastjes goed verloopt. Deze communicatie gebeurd via een RS485 bus. Voordat het naar de computer gaat wordt dit omgezet naar een RS232 verbinding welke aangesloten wordt op de serie\"{e}le port van de computer. De computer is de zogenaamde ``master'' van de RS485 bus. Dit betekend eigenlijk dat hij de baas is op de bus en bepaald wie er op welk moment mag zenden. Zonder een master zal de communicatie over de bus niet goed verlopen. Zodra de software een antwoord binnenkrijgt zal hij controleren of de binnengekregen data geldig is en hierna zal hij de data doorsturen naar de antwoordverwerking. Wanneer er bij de communcatie een foutmelding is ontstaan zal de software aan het betreffende kastje vragen of hij de data opnieuw zou willen versturen. \\
+    Zodra een antwoord binnen is gekomen zal de software tevens een reply geven naar het tentamen kastje om door te geven dat het antwoord was gegeven. Het kastje kan na deze reply ook weergeven dat het antwoord is ontvangen en verwerkt is. \\
+    Wanneer de tijd op is zal de software laten weten via een broadcast melding dat de tijd op is. Wanneer een gebruiker op dat moment nog geen antwoord had gegeven zal het kastje dit versturen. Zodra het systeem van alle kastjes een antwoord heeft begint het aan een nieuwe vraagen zal hij weer via een broadcast melding dit melden aan alle aangesloten kastjes. Hiermee weten de kastjes dat ze het vorige antwoord weg moeten halen en dat ze zo een nieuw antwoord kunnen versturen. De software zal pas de nieuwe vraage stellen wanneer alle kastjes geantwoord hebben dat ze er klaar voor zijn. Op deze manier weten we zeker dat alle kastjes ook echt klaar zijn met hun lokale taken en dingen en er geen communicatie problemen zijn opgetreden. Wanneer een kastje niet antwoord op de broadcast melding zal de computer een specifiek aan dat gericht kastje een vraag stellen met of hij klaar is. Dit duurt echter wel langer, doordat een aparte melding verstuurd moet worden.
+  \item Antwoordverwerking \\
+    De antwoordverwerking zorgt er voor dat de antwoorden welke binnenkomen correct verwerkt worden. Hierna worden deze opgeslagen om aan het eind verwerkt te kunnen tot een cijfer. Doordat het systeem weet welke student (Via het studentnummer) op welk kastje zat, kan hij eenvoudig een studentnummer gebaseerde lijst maken met de cijfers. 
+\end{itemize}
+\subsubsection{Microcontroller}
+\subsection{Communicatie}
+\section{Project verdeling}
+
+\section{Project status}
+
+\begin{thebibliography}{xxxxx}
+\bibitem[test01]{i1}Tewstje
+\end{thebibliography}
 
 \end{document}

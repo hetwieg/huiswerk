@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  25 NOV 2010 09:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.10.10)  25 NOV 2010 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -137,27 +137,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 24.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pro.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./pro.toc)
 \tf@toc=\write3
 \openout3 = `pro.toc'.
 
- [1]
-(./pro.aux) ) 
+
+[1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+ (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+ [2] [3] (./pro.aux) ) 
 Here is how much of TeX's memory you used:
- 1704 strings out of 495006
- 23058 string characters out of 1181409
- 82393 words of memory out of 3000000
- 4887 multiletter control sequences out of 15000+50000
- 6982 words of font info for 25 fonts, out of 3000000 for 9000
+ 1728 strings out of 495006
+ 23410 string characters out of 1181409
+ 90435 words of memory out of 3000000
+ 4905 multiletter control sequences out of 15000+50000
+ 8002 words of font info for 28 fonts, out of 3000000 for 9000
  68 hyphenation exceptions out of 8191
- 25i,6n,24p,331b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on pro.pdf (2 pages, 39895 bytes).
+ 25i,6n,24p,979b,207s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmsl10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb>
+Output written on pro.pdf (5 pages, 105885 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 50 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
