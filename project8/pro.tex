@@ -61,13 +61,20 @@ De software van de microcontroller is globaal verdeeld in twee delen. Deze delen
   \item Interupts
     Door gebruik te maken van interupts kunnen we eenvoudig zien of er een knop is ingedrukt. Zodra er een knop wordt ingedrukt genereerd de microcontroller een interupt welke je af moet vangen. Hiermee kan je eenvoudig zien welke knop is ingedrukt en hierna bepalen wat je ermee moet doen. Hierna moet enkel de interupt flag nog goed terug gezet worden zodat je weer een nieuwe interupt kan ontvangen. Wannee dit niet gebeurd zal de micrcontroller niet nogmaals een interupt sturen, en is het dus mogelijk dat je interupts mist.
 \end{itemize}
+De software van de microcontroller en de computer staat in principe geheel los van elkaar. Ze communiceren met elkaar via een RS485 bus welke geheel niet gerelateerd is aan de gebruikt software. Voor de microcontroller wordt deze bus direct via de UART van de microcontroller aangeroepen en voor de software wordt deze aangeroepen als serie\"{e}le port. Voor beide hadden we ook een compleet andere manier van communiceren kunnen kiezen zonder de gehele software aan te passen.
 \subsection{Communicatie}
 \section{Project verdeling}
-
+Het project is verdeeld over 3 belangerijke onderdelen, te weten:
+\begin{itemize}
+  \item Electronica
+  \item Programmeren microcontroller
+  \item Programmeren computersoftware
+\end{itemize}
+Voor de electronica werken we in principe samen aan het ontwerp en de uitvoering. Hiervoor hebben we gekozen doordat we allebei ervaring met electronica hebben en dit het makkelijkst samen kunnen maken. Door deze samenwerking kunnen snel de electronica ontwerpen en uitvoeren.\\De beide overige onderdelen zijn verdeeld over ons beide. Sebastiaan zorgt primair voor het programmeren van de computer, terwijl Paul primair werkt aan de software voor de microcontroller. Beide hebben over deze verschillende onderdelen ervaring met de verschillende benodigd heden voor het programmeren. 
 \section{Project status}
 
-\begin{thebibliography}{xxxxx}
-\bibitem[test01]{i1}Tewstje
-\end{thebibliography}
+%\begin{thebibliography}{xxxxx}
+%\bibitem[test01]{i1}Tewstje
+%\end{thebibliography}
 
 \end{document}
