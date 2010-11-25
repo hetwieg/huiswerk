@@ -54,6 +54,13 @@ De software van de computer is onderverdeeld in 3 delen:
     De antwoordverwerking zorgt er voor dat de antwoorden welke binnenkomen correct verwerkt worden. Hierna worden deze opgeslagen om aan het eind verwerkt te kunnen tot een cijfer. Doordat het systeem weet welke student (Via het studentnummer) op welk kastje zat, kan hij eenvoudig een studentnummer gebaseerde lijst maken met de cijfers. 
 \end{itemize}
 \subsubsection{Microcontroller}
+De software van de microcontroller is globaal verdeeld in twee delen. Deze delen hangen echter wel vrij zwaar van elkaar af. Het doel van de microcontroller is om zo dom mogelijk te blijven. Dit betekend dat hij zelf geen validatie doet van gegevens of antwoorden. Dit wordt geheel gedaan door de computer. Hierdoor konden we het kastje simpel houden en kosten het minder tijd om de microcontroller te programeren. Het programmeren van de microcontroller kost in principe meer tijd als het programmeren in java, wat gebruikt wordt op de computer.
+\begin{itemize}
+  \item Communicatie\\
+    De communcatie in de microcontroller is eigenlijk het belangerijkste taak van de microcontroller. Zodra de student op één van de knoppen drukt wordt dit verstuurd over de bus. Hierna wordt er gewacht, zoals hierboven ook al beschreven, totdat er een goedkeuring terugkomt. Zodra deze er is zal de microcontroller de led van die knop aanmoeten zetten zodat de student kan zien dat het antwoord verwerkt is. Verder loopt de communicatie zoals hierboven uitgelegt is.
+  \item Interupts
+    Door gebruik te maken van interupts kunnen we eenvoudig zien of er een knop is ingedrukt. Zodra er een knop wordt ingedrukt genereerd de microcontroller een interupt welke je af moet vangen. Hiermee kan je eenvoudig zien welke knop is ingedrukt en hierna bepalen wat je ermee moet doen. Hierna moet enkel de interupt flag nog goed terug gezet worden zodat je weer een nieuwe interupt kan ontvangen. Wannee dit niet gebeurd zal de micrcontroller niet nogmaals een interupt sturen, en is het dus mogelijk dat je interupts mist.
+\end{itemize}
 \subsection{Communicatie}
 \section{Project verdeling}
 
