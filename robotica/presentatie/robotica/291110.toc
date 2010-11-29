@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.07pt}
+\select@language {dutch}
+\beamer@sectionintoc {1}{Introductie}{3}{0}{1}
+\beamer@sectionintoc {2}{Onderzoek}{5}{0}{2}
+\beamer@sectionintoc {3}{Afsluiting}{11}{0}{3}
