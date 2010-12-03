@@ -48,4 +48,7 @@ all:
 save:
 	${GIT} add .
 	${GIT} commit --allow-empty
-	${GIT} push
+	${GIT} push origin master
+
+update:
+	${GIT} pull origin master
