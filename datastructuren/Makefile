@@ -16,6 +16,7 @@ MKINDEX=texindy -L english ${FILE}.idx
 RM=rm -rf
 CP=cp
 CD=cd
+GIT=git
 
 # make default == all
 # __COMPLETELY__ builds the pdf for the documentation. Remove's all the temp crap
@@ -43,3 +44,8 @@ all:
 	${CP} ${TMP}${FILE}${PDF} ${BASE}${FILE}${PDF}
 # Clean temp dir
 	${RM} ${TMP}
+
+save:
+	${GIT} add .
+	${GIT} commit --allow-empty
+	${GIT} push
