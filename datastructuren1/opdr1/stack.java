@@ -89,8 +89,11 @@ public class stack
 	studentElement tmp = start;
 	for (int i = 0; i < getSize(); i++)
 	    {
-		if (s.getStudent() == tmp.getStudent().getStudent())
+		student t = tmp.getStudent();
+		System.out.println(t.getStudent() == s.getStudent());
+		if (s.getStudent() == t.getStudent())
 		    {
+			System.out.println("BLABLA");
 			return true;
 		    }
 		tmp = start.getVolgend();	     

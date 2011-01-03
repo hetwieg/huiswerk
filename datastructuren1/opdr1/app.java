@@ -13,7 +13,8 @@ public class app
 		
 		student s = new student(student, naam, geslacht, leeftijd);
 		
-		st.push(s);
+		if (!st.peek(s))
+		    st.push(s);
 	    }
 
 	System.out.println("===============================================");
@@ -30,7 +31,13 @@ public class app
 
 	System.out.println("===============================================");
 	st.printStack();
+	System.out.println("===============================================PUSH");
 	st.push(last);
-	//	s.printStudent();
+	if (!st.peek(last))
+	    st.push(last);
+	else
+	    System.out.println("Double");
+	System.out.println("===============================================TEST");
+	st.printStack();
     }
 }
