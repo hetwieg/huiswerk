@@ -97,6 +97,7 @@ public class Vragen extends javax.swing.JFrame {
 
         javax.swing.GroupLayout pnlALayout = new javax.swing.GroupLayout(pnl);
         pnl.setLayout(pnlALayout);
+
         pnlALayout.setHorizontalGroup(
             pnlALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlALayout.createSequentialGroup()
@@ -104,6 +105,7 @@ public class Vragen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE))
         );
+
         pnlALayout.setVerticalGroup(
             pnlALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlALayout.createSequentialGroup()
