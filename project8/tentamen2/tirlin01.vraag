@@ -10,7 +10,7 @@ iLinux voor beginners eindtentamen
 ?Wat is linux
 t5000
 p1
-# < Geen Afbeelding
+<./test1.jpg
 >A,B,C
 +Een OS (Operating System)
 -Een pak jogert bij de supermarkt
@@ -19,6 +19,7 @@ p1
 !NEXT
 ?What is the airspeed velocity of an unladen swallow
 t5000
+<./test2.jpg
 p1
 >A,B
 +African

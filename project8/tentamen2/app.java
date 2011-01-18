@@ -36,13 +36,15 @@ public class app
 		case '!': // Speciaal command
 		    // Comandows verder opdelen hier (extra switch)
 		    if(command.toLowerCase().equals("rand_andwoorde")) rand_andwoorde = true;
+                    else if(command.toLowerCase().equals("static_andwoorde")) rand_andwoorde = false;
                     else if(command.toLowerCase().equals("rand_vragen")) rand_vragen = true;
+                    else if(command.toLowerCase().equals("static_vragen")) rand_vragen = false;
                     else if(command.toLowerCase().equals("next"))
                     {
                         System.out.println("---NEXT QUESTION");
                         vragen.add(new Vraag());
                     }
-                    else System.out.println(command);
+                    //else System.out.println(command); // Onbekent comandow
 		    break;
 		case 'n': // Naam van de toets
 		    Naam  = command;
@@ -62,6 +64,9 @@ public class app
 		    break;
 		case '>': // Opschrift op de buttons (Comma geschijden)
 		    vragen.get(vragen.size()-1).setButtons(command);
+                    break;
+		case '<': // Achtergrond afbeelding van de vraag
+		    vragen.get(vragen.size()-1).setAchtergrond(command);
 		    break;
 		case '+': // Een juist andwoord (bij meerdere + telt de laaste + als juiste andwoord)
 		    vragen.get(vragen.size()-1).addAndwoord(command, true);

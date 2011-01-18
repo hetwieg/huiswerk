@@ -1,15 +1,19 @@
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.JProgressBar;
+import java.awt.event.ComponentEvent;
 
 public class VraagGui extends javax.swing.JFrame {
     protected javax.swing.JPanel pnlAndwoorden;
+    protected javax.swing.JPanel pnlVraag;
     protected javax.swing.JLabel lblVraag;
     protected javax.swing.JProgressBar pbTime;
+    protected javax.swing.JLabel BackImg;
     
     public VraagGui()
     {
+        BackImg = new  javax.swing.JLabel();
 	lblVraag = new javax.swing.JLabel();
+        pnlVraag = new javax.swing.JPanel();
 	pnlAndwoorden = new javax.swing.JPanel();
         pbTime = new javax.swing.JProgressBar();
 	
@@ -17,14 +21,32 @@ public class VraagGui extends javax.swing.JFrame {
 	//setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setAlwaysOnTop(true);
         this.setUndecorated(true);
+        this.setLayout(null);
 	
 	Dimension dim = Toolkit.getDefaultToolkit().getScreenSize(); // Scherm grote opvragen
 	
         this.setLocation(0, 0);
         this.setSize(dim);
 
+        // Back image instellen
+        BackImg.setSize(dim);
+	BackImg.setLocation(0, 0);
+        BackImg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BackImg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
         // de Vraag
-        lblVraag.setFont(new java.awt.Font("DejaVu Sans", 1,20));
+        lblVraag.setFont(new java.awt.Font("DejaVu Sans", 1,25));
+	lblVraag.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblVraag.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+	lblVraag.setSize(dim.getSize().width-20, 280);
+	lblVraag.setLocation(10, 10);
+
+        // Panel Vraag
+	pnlVraag.setSize(dim.getSize().width, 300);
+	pnlVraag.setLocation(0, 0);
+        pnlVraag.setBackground(new java.awt.Color(255, 255, 255, 70));
+        pnlVraag.setLayout(null);
+        pnlVraag.add(lblVraag);
 
         // Time toevoegen
         pbTime.setSize(dim.getSize().width, 30);
@@ -38,7 +60,8 @@ public class VraagGui extends javax.swing.JFrame {
 	// Add gedoe
         this.add(pbTime);
 	this.add(pnlAndwoorden);
-        this.add(lblVraag);
+        this.add(pnlVraag);
+        this.add(BackImg);
     }
 
     private void addAndwoord(String button, String Andwoord)
@@ -63,7 +86,7 @@ public class VraagGui extends javax.swing.JFrame {
 	cmd.setLocation(5, 5);
 	
 	// Label gereet maken
-        lbl.setFont(new java.awt.Font("DejaVu Sans", 1, 20));
+        lbl.setFont(new java.awt.Font("DejaVu Sans", 1, 25));
 	lbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lbl.setText("<HTML>"+Andwoord+"</HTML>");
@@ -99,28 +122,41 @@ public class VraagGui extends javax.swing.JFrame {
 
     public static void Show(Vraag data,int VraagNumemr)
     {
-        //
-        String value = "<HTML>Vraag " + VraagNumemr + "<br>" + data.l_Vraag + "</div></HTML>";
+        // Vraag voorberijden
+        String value = "<HTML>Vraag " + VraagNumemr + ":<br>" + data.l_Vraag + "</div></HTML>";
+
+        // Time lezen
         int Time = 10000;
 
 	// Vraag scherm aanmaken
 	VraagGui vraag = new VraagGui();
 
+        // Achtergrond laden
+        vraag.BackImg.setIcon(data.getAchtergrond());
+
 	// Vraag invullen
 	vraag.lblVraag.setText(value);
 	
-	for(int i=0;i<data.l_Andwoorden.size();i++) {	  
-	    vraag.addAndwoord("A", data.l_Andwoorden.get(i).getValue());
+        String[] Buttons = data.l_Buttons.split(",");
+
+	for(int i=0;i<data.l_Andwoorden.size();i++) {
+            if(Buttons.length <= i){
+                vraag.addAndwoord(getLetter(i), data.l_Andwoorden.get(i).getValue());
+            }
+            else {
+                if(Buttons[i].trim().equals("")) Buttons[i] = getLetter(i);
+                vraag.addAndwoord(Buttons[i], data.l_Andwoorden.get(i).getValue());
+            }
 	}
 	
 	// Grote bepalen
 	switch(data.l_Andwoorden.size()) {
 	case 1:
 	case 2:
-	    vraag.pnlAndwoorden.setLayout(new java.awt.GridLayout(2, 0, 5, 5));
+	    vraag.pnlAndwoorden.setLayout(new java.awt.GridLayout(2, 1, 5, 5));
 	    break;
 	case 3:
-	    vraag.pnlAndwoorden.setLayout(new java.awt.GridLayout(3, 0, 5, 5));
+	    vraag.pnlAndwoorden.setLayout(new java.awt.GridLayout(3, 1, 5, 5));
 	    break;
 	case 4:
 	    vraag.pnlAndwoorden.setLayout(new java.awt.GridLayout(2, 2, 5, 5));
@@ -147,5 +183,18 @@ public class VraagGui extends javax.swing.JFrame {
         }
 
         vraag.dispose();
+    }
+
+    private static String getLetter(int i) {
+        switch(i) {
+            case 0: return "A";
+            case 1: return "B";
+            case 2: return "C";
+            case 3: return "D";
+            case 4: return "E";
+            case 5: return "F";
+        }
+
+        return "?";
     }
 }
