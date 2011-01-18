@@ -5,7 +5,7 @@ public class app
 {
     public static void main(String args[])
     {
-	String vragen_f = "./tirlin01.vraag";
+	String vragen_f = "./tirlin0.vraag";
 	String layout_f = "./tirlin01.styl";
 
 	boolean rand_andwoorde = false;
@@ -20,29 +20,30 @@ public class app
 
 	System.out.println("Programma starten");
 
+	// Load screen starten
+	LoadScreen.Update("Hallo allemaal", 10);
+
 	// Slectie van de vragen vint plaats in andere app
 
-	// Vragen laden
-        System.out.println("---START LOADING---");
+	// Vragen laden	
 	try {
 	    BufferedReader br = new BufferedReader(new FileReader(vragen_f));
 	    String line = "";
 	    while((line = br.readLine()) != null) {
 		if(line.length() < 1) continue;
 		
-		String command = line.substring(1).trim();
+		String command = line.substring(1);
 		
 		switch(line.charAt(0)) {
 		case '!': // Speciaal command
 		    // Comandows verder opdelen hier (extra switch)
-		    if(command.toLowerCase().equals("rand_andwoorde")) rand_andwoorde = true;
-                    else if(command.toLowerCase().equals("rand_vragen")) rand_vragen = true;
-                    else if(command.toLowerCase().equals("next"))
-                    {
-                        System.out.println("---NEXT QUESTION");
-                        vragen.add(new Vraag());
-                    }
-                    else System.out.println(command);
+		    /*switch(command.toLowerCase()) {
+		    case "rand_andwoorde": rand_andwoorde = true;  break;
+		    case "rand_vragen": rand_vragen = true; break;
+		    case "next": // Nieuwe vraag class defineren */
+			vragen.add(new Vraag());
+			/*break;
+			}*/
 		    break;
 		case 'n': // Naam van de toets
 		    Naam  = command;
@@ -69,52 +70,28 @@ public class app
 		case '-': // Verkeert andwoord
 		    vragen.get(vragen.size()-1).addAndwoord(command, false);
 		    break;
-                default:
-                    //System.out.println("u:" + line.charAt(0));
 		}
 	    }
 	}
 	catch(IOException ex) {
-	    ex.printStackTrace(System.out);
+	    // TST
 	}
 	finally {
 	    //br.Close();
 	}
-        System.out.println("---EIND LOADING---");
 
 	// Vragen gereet maken
-        System.out.println("---START VRAGENCOPPEL---");
-        List<Vraag> show = new ArrayList<Vraag>();
+	//All vragen in loop doorlopen en in een array dumpen
 
-        while(vragen.size() > 0)
-        {
-            int i = vragen.size();
+	//vragen andwoorden random sorteren
+	//vragen random sorteren
 
-            if(rand_vragen == true && vragen.size() > 1) i -= new Random().nextInt(i);
-
-            System.out.println("Vraag: "  + i);
-
-            Vraag t = vragen.get(i-1);
-            vragen.remove(t);
-
-            if(rand_andwoorde == true) t.Shuffel();
-            
-            show.add(t);
-        }
-        System.out.println("---EIND VRAGENCOPPEL---");
-
-        System.out.println("---START WELKOMS SCHERM---");
 	// Welkoms scherm tonen
-        System.out.println("---EIND WELKOMS SCHERM---");
-
-	System.out.println("---START EXAMEN---");
 
 	// Vragen tonen
-	for(int i=0;i<show.size();i++) {
-	    show.get(i).Show(i+1);
-        }
-
-	System.out.println("---EIND EXAMEN---");
+	/*for() {
+	    vragen.getLast().Show();
+	    }*/
 	
 	System.out.println("Afnamen software beindigt");
 	System.exit(0); // Force exit
