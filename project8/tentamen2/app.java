@@ -25,6 +25,8 @@ public class app
 	// Vragen laden
         System.out.println("---START LOADING---");
 	try {
+            LayoutFile.Init(layout_f);
+            
 	    BufferedReader br = new BufferedReader(new FileReader(vragen_f));
 	    String line = "";
 	    while((line = br.readLine()) != null) {
@@ -41,6 +43,10 @@ public class app
                     else if(command.toLowerCase().equals("static_vragen")) rand_vragen = false;
                     else if(command.toLowerCase().equals("next"))
                     {
+                        if (rand_andwoorde == true) {
+                            vragen.get(vragen.size()-1).Shuffel();
+                        }
+
                         System.out.println("---NEXT QUESTION");
                         vragen.add(new Vraag());
                     }
@@ -101,15 +107,14 @@ public class app
 
             Vraag t = vragen.get(i-1);
             vragen.remove(t);
-
-            if(rand_andwoorde == true) t.Shuffel();
             
             show.add(t);
         }
         System.out.println("---EIND VRAGENCOPPEL---");
 
         System.out.println("---START WELKOMS SCHERM---");
-	// Welkoms scherm tonen
+	WelkomScreen welkom = new WelkomScreen(Naam, Info);
+        welkom.setVisible(true);
         System.out.println("---EIND WELKOMS SCHERM---");
 
 	System.out.println("---START EXAMEN---");

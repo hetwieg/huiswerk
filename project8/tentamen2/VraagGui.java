@@ -1,6 +1,6 @@
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.awt.event.ComponentEvent;
 
 public class VraagGui extends javax.swing.JFrame {
     protected javax.swing.JPanel pnlAndwoorden;
@@ -35,7 +35,8 @@ public class VraagGui extends javax.swing.JFrame {
         BackImg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         // de Vraag
-        lblVraag.setFont(new java.awt.Font("DejaVu Sans", 1,25));
+        lblVraag.setFont(new java.awt.Font(LayoutFile.getData("font", "DejaVu Sans"), 1,LayoutFile.getData("vraag_size", 25)));
+        lblVraag.setForeground(LayoutFile.getData("vraag_fcolor", Color.black));
 	lblVraag.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblVraag.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 	lblVraag.setSize(dim.getSize().width-20, 280);
@@ -44,18 +45,20 @@ public class VraagGui extends javax.swing.JFrame {
         // Panel Vraag
 	pnlVraag.setSize(dim.getSize().width, 300);
 	pnlVraag.setLocation(0, 0);
-        pnlVraag.setBackground(new java.awt.Color(255, 255, 255, 70));
+        pnlVraag.setBackground(LayoutFile.getData("vraag_bcolor", new Color(255, 255, 255, 70)));
         pnlVraag.setLayout(null);
         pnlVraag.add(lblVraag);
 
         // Time toevoegen
         pbTime.setSize(dim.getSize().width, 30);
         pbTime.setLocation(0, dim.getSize().height - 330); // boven ander pennel platsen
+        pbTime.setForeground(LayoutFile.getData("tijd_fcolor", Color.red)); // Color uit file
+        pbTime.setBackground(LayoutFile.getData("tijd_bcolor", new Color(255,255,255,70)));
         
 	// Pannel toevoegen
 	pnlAndwoorden.setSize(dim.getSize().width, 300);
 	pnlAndwoorden.setLocation(0, dim.getSize().height - 300);
-	pnlAndwoorden.setBackground(new java.awt.Color(0, 128, 70));
+	pnlAndwoorden.setBackground(LayoutFile.getData("andwoorden_bcolor", new Color(0, 128, 70, 70)));
 	
 	// Add gedoe
         this.add(pbTime);
@@ -75,18 +78,20 @@ public class VraagGui extends javax.swing.JFrame {
 	javax.swing.JButton cmd = new javax.swing.JButton();
 	
 	// pnl gereet maken
-	pnl.setBackground(new java.awt.Color(200, 200, 100, 70));
+	pnl.setBackground(LayoutFile.getData("andwoord_bcolor", new Color(200, 200, 100, 70)));
 	pnl.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 	
 	// Button gereet maken
-	cmd.setFont(new java.awt.Font("DejaVu Sans", 1, 36));
+	cmd.setFont(new java.awt.Font(LayoutFile.getData("font", "DejaVu Sans"), 1, LayoutFile.getData("button_size", 36)));
+        cmd.setForeground(LayoutFile.getData("andwoord_acolor", Color.black));
 	cmd.setText(button);
         cmd.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 	cmd.setSize(30, 30);
 	cmd.setLocation(5, 5);
 	
 	// Label gereet maken
-        lbl.setFont(new java.awt.Font("DejaVu Sans", 1, 25));
+        lbl.setFont(new java.awt.Font(LayoutFile.getData("font", "DejaVu Sans"), 1, LayoutFile.getData("andwoord_size", 20)));
+        lbl.setForeground(LayoutFile.getData("andwoord_fcolor", Color.black));
 	lbl.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lbl.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lbl.setText("<HTML>"+Andwoord+"</HTML>");
@@ -126,7 +131,7 @@ public class VraagGui extends javax.swing.JFrame {
         String value = "<HTML>Vraag " + VraagNumemr + ":<br>" + data.l_Vraag + "</div></HTML>";
 
         // Time lezen
-        int Time = 10000;
+        int Time = data.getTime();
 
 	// Vraag scherm aanmaken
 	VraagGui vraag = new VraagGui();
